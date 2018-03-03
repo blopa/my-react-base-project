@@ -1,11 +1,7 @@
-# FUN FORUM
+# BASE PROJECT
 
 # About
-This project is a personal P.O.C. I made as I self-improvement for my Javascript skills. My goal was to build a forum using data from a REST API in less than 8 hours.
-
-I'm using [typicode/json-server](https://github.com/typicode/json-server) free service for the mocked REST API.
-
-End result: https://blopa.github.io/fun_forum
+This is a base project
 
 # Development
 
@@ -99,8 +95,6 @@ To run those 3 commands you can just do
 - [typicode/json-server](https://github.com/typicode/json-server) for mocked data.
 
 # Release Notes
-- **v0.0.2:**
-	- Add logout button
 - **v0.0.1:**
 	- First version
 
