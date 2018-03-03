@@ -1,24 +1,15 @@
 import {createStore} from 'redux';
 
 const initialState = {
-  logged: false,
-  token: '',
-  user: {
-    id: 1,
-    nickname: 'nick1'
-  }
+  data: {}
 };
 
 const reducer = (state = initialState, action) => {
   const newState = JSON.parse(JSON.stringify(state));
   switch (action.type) {
-    case 'LOGIN':
-      newState.logged = action.payload.logged;
-      newState.token = action.payload.token;
+    case 'ACTION_1':
       break;
-    case 'LOGOUT':
-      newState.logged = action.payload.logged;
-      newState.token = action.payload.token;
+    case 'ACTION_2':
       break;
     default:
       break;
