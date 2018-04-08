@@ -1,7 +1,7 @@
 # BASE PROJECT
 
 # About
-This is a base project
+This is a base React project
 
 # Development
 

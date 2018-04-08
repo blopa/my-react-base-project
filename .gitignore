@@ -1,17 +1,35 @@
+# General
 .DS_Store
-node_modules/
-dist/index.html
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-test/unit/coverage
-test/e2e/reports
-selenium-debug.log
-
-# Editor directories and files
+.vscode
 .idea
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.iml
+*.log*
+chrome-user-data
+*.sublime-project
+*.sublime-workspace
+
+# React https://raw.githubusercontent.com/facebook/react/master/.gitignore
+.DS_STORE
+node_modules
+*~
+*.pyc
+.grunt
+_SpecRunner.html
+__benchmarks__
+build/
+remote-repo/
+coverage/
+flow-coverage/
+.module-cache
+fixtures/dom/public/react-dom.js
+fixtures/dom/public/react.js
+test/the-files-to-test.generated.js
+.vscode
+*.swp
+*.swo
+dist
+src/index.html

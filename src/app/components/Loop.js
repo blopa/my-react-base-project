@@ -1,28 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import '../styles/Loop.css';
+// import styles from '../styles/Loop.scss';
 
 export class Loop extends React.Component {
   render() {
-    const deb = (
+    return (
       <ul>
         {this.props.items.map((o, k) => {
           const child = React.cloneElement(this.props.children, {data: o});
           return (
-            <li key={k}>
+            <li key={k} className={this.props.className}>
               {child}
             </li>
           );
         }, this)}
       </ul>
     );
-    return deb;
   }
 }
 
 Loop.propTypes = {
   children: PropTypes.element.isRequired,
-  items: PropTypes.array
+  items: PropTypes.array,
+  className: PropTypes.string
   // https://reactjs.org/docs/typechecking-with-proptypes.html
 };

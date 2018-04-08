@@ -3,14 +3,9 @@ import {Route, Switch, Redirect} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {Header} from './Header';
 import {Home} from './routes/Home';
-import '../styles/Root.css';
-import PropTypes from 'prop-types';
+import '../styles/Root.scss';
 
-class Root extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+export class Root extends React.Component {
   render() {
     return (
       <div>
@@ -25,14 +20,46 @@ class Root extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({userData: state});
+const mapStateToProps = state => ({storeData: state});
 const mapDispatchToProps = dispatch => (
   {
-    action: () => (
+    addNewList: list => (
       dispatch(
         {
-          type: 'ACTION_1',
-          payload: {}
+          type: 'ADD',
+          payload: {
+            list: list
+          }
+        }
+      )
+    ),
+    updateList: list => (
+      dispatch(
+        {
+          type: 'UPDATE',
+          payload: {
+            list: list
+          }
+        }
+      )
+    ),
+    loadList: lists => (
+      dispatch(
+        {
+          type: 'LOAD',
+          payload: {
+            lists: lists
+          }
+        }
+      )
+    ),
+    removeList: list => (
+      dispatch(
+        {
+          type: 'REMOVE',
+          payload: {
+            list: list
+          }
         }
       )
     )
@@ -43,6 +70,4 @@ export default connect(mapStateToProps, mapDispatchToProps)(Root);
 
 Root.propTypes = {
   // https://reactjs.org/docs/typechecking-with-proptypes.html
-  userData: PropTypes.object,
-  action: PropTypes.func
 };

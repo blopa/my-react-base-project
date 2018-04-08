@@ -1,15 +1,23 @@
 import {createStore} from 'redux';
 
 const initialState = {
-  data: {}
+  lists: [] // {id: 1, hash: '', type: 0, cards: ''}
 };
 
 const reducer = (state = initialState, action) => {
   const newState = JSON.parse(JSON.stringify(state));
   switch (action.type) {
-    case 'ACTION_1':
+    case 'ADD':
+      newState.lists.push(action.payload.list);
       break;
-    case 'ACTION_2':
+    case 'LOAD':
+      newState.lists = action.payload.lists;
+      break;
+    case 'UPDATE':
+      newState.lists = action.payload.lists;
+      break;
+    case 'REMOVE':
+      newState.lists = [];
       break;
     default:
       break;

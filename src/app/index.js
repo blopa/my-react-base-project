@@ -3,7 +3,6 @@ import {render} from 'react-dom';
 import {HashRouter as Router, Route} from 'react-router-dom';
 import {Provider} from 'react-redux';
 import store from './store.js';
-
 import Root from './containers/Root';
 
 class App extends React.Component {
