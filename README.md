@@ -53,7 +53,7 @@ Also, be sure to have `git` available in your PATH, `npm` might need it.
 
 All the project dependencies are for development purposes only.
 
-    $ git clone https://github.com/blopa/fun-forum.js.git
+    $ git clone https://github.com/blopa/my-react-base-project.git
     $ cd PROJECT
     $ npm install
 
