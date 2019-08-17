@@ -1,9 +1,11 @@
 module.exports = {
   'parser': 'babel-eslint',
+  'extends': ['airbnb', 'plugin:jest/recommended'],
   'env': {
     'es6': true,
     'browser': true,
-    'node': true
+    'node': true,
+    'jest/globals': true
   },
   'parserOptions': {
     'sourceType': 'module',
@@ -16,7 +18,8 @@ module.exports = {
     'react',
     'flowtype',
     'filenames',
-    'prettier'
+    'prettier',
+    'jest'
   ],
   'globals': {
     'before': true,
@@ -307,6 +310,13 @@ module.exports = {
     'react/jsx-closing-bracket-location': 'warn',
     'react/jsx-closing-tag-location': 'warn',
     'react/jsx-curly-brace-presence': 'warn',
+    'import/no-extraneous-dependencies': [
+      'warn',
+      {
+        'devDependencies': true,
+        'optionalDependencies': true
+      }
+    ],
     'react/jsx-curly-spacing': [
       'warn',
       {
@@ -386,5 +396,10 @@ module.exports = {
     'react/sort-comp': 'warn',
     'react/style-prop-object': 'error',
     'react/void-dom-elements-no-children': 'error'
+  },
+  settings: {
+    'import/resolver': {
+      webpack: {}
+    }
   }
 };

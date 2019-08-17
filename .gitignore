@@ -1,35 +1,30 @@
-# General
-.DS_Store
-.vscode
-.idea
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.iml
-*.log*
-chrome-user-data
-*.sublime-project
-*.sublime-workspace
+# Logs
+logs
+*.log
+npm-debug.log*
 
-# React https://raw.githubusercontent.com/facebook/react/master/.gitignore
-.DS_STORE
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Dependency directories
 node_modules
-*~
-*.pyc
-.grunt
-_SpecRunner.html
-__benchmarks__
-build/
-remote-repo/
-coverage/
-flow-coverage/
-.module-cache
-fixtures/dom/public/react-dom.js
-fixtures/dom/public/react.js
-test/the-files-to-test.generated.js
-.vscode
-*.swp
-*.swo
-dist
-src/index.html
+jspm_packages
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# Because Mac
+.DS_Store
+
+# Project Files
+public
+storybook-static
+docs
+.eslintcache
+.stylelintcache
+.idea

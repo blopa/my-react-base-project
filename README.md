@@ -1,124 +1,47 @@
-# BASE PROJECT
+# React pages boilerplate
 
-# About
-This is a base React project
+![Cover](cover.png)
+This boilerplate introduces a simple way for developing serverless React applications, which are perfect for serving from [Github Pages](https://pages.github.com/).
 
-# Development
+## Technologies
 
-## Requirements
+* [Webpack@4](https://webpack.js.org/) as module bundler
+* [Babel](https://babeljs.io/) with [babel-preset-env](https://babeljs.io/docs/plugins/preset-env/) for js and jsx transpiling
+* [react-hot-loader@4](https://github.com/gaearon/react-hot-loader) for extremely fast hot updates
+* [Eslint](http://eslint.org/) and [Stylelint](http://stylelint.io/) for linting
+* [Prettier](https://prettier.io/) for automated code formatting
+* [Jest](https://facebook.github.io/jest/) with [Enzyme](http://airbnb.io/enzyme/) for testing
+* CSS Modules, [Sass](http://sass-lang.com/) and [PostCSS](http://postcss.org/) with [Autoprefixer](https://github.com/postcss/autoprefixer) for styles processing
+* [Storybook](https://storybook.js.org/) for painless UI development and testing
 
-For development, you will only need Node.js installed on your environment.
-And please use the appropriate [Editorconfig](http://editorconfig.org/) plugin for your Editor (not mandatory).
+## Preinstalled and configured libraries
 
-### Node
+* [react@16](https://github.com/facebook/react)
+* [redux](https://github.com/reactjs/redux)
+* [react-router@4](https://github.com/ReactTraining/react-router) with HashRouter (perfectly suits Github Pages environment)
+* [react-redux](https://github.com/reactjs/react-redux)
+* [axios](https://github.com/mzabriskie/axios) with [redux-axios-middleware](https://github.com/svrcekmichal/redux-axios-middleware)
+* [ramda](http://ramdajs.com/) and [lodash](https://lodash.com/) as utility libraries (unused parts will be cut off with babel and webpack plugins)
+* [react-icons](https://gorangajic.github.io/react-icons/)
 
-[Node](http://nodejs.org/) is really easy to install & now include [NPM](https://npmjs.org/).
-You should be able to run the following command after the installation procedure
-below.
+## Getting started
 
-    $ node --version
-    v9.5.0
+* Clone `git clone https://github.com/rtivital/react-pages-boilerplate` or [download](https://github.com/rtivital/react-pages-boilerplate/archive/master.zip) this repository.
+* (Optional) Run `nvm use`. This will ensure that you are running the supported version of Node.js. You can nvm installation instructions [here](https://github.com/creationix/nvm).
+* Install dependencies: `npm install`
+* Run the project: `npm start`
+* Remove git folder with `npm run clean:git` (this will remove .git folder attached to react-pages-boilerplate) and follow [these instructions](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/) to init new Github repository and enable publishing to Gihub Pages.
 
-    $ npm --version
-    5.6.0
+## npm scripts
 
-#### Node installation on OS X
+* `npm start` – starts development server with webpack-dev-server
+* `npm test` – runs tests with Jest
+* `npm run build` – builds project to production (Note that the result bundle is not suitable for hosting on Github Pages, use `npm run deploy` to build and deploy to Github Pages)
+* `npm run deploy` – builds and deploys project to Github pages
+* `npm run lint` – lints both JavaScript (with `npm run lint:js`) and Sass files (with `npm run lint:scss`)
+* `npm run storybook` – starts storybook server on port 9001
+* `npm run prettier` – format js and jsx files with prettier
 
-You will need to use a Terminal. On OS X, you can find the default terminal in
-`/Applications/Utilities/Terminal.app`.
+## Changelog
 
-Please install [Homebrew](http://brew.sh/) if it's not already done with the following command.
-
-    $ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-
-If everything when fine, you should run
-
-    brew install node
-
-#### Node installation on Linux
-
-    sudo apt-get install python-software-properties
-    sudo add-apt-repository ppa:chris-lea/node.js
-    sudo apt-get update
-    sudo apt-get install nodejs
-
-#### Node installation on Windows
-
-Just go on [official Node.js website](http://nodejs.org/) & grab the installer.
-Also, be sure to have `git` available in your PATH, `npm` might need it.
-
----
-
-## Install
-
-All the project dependencies are for development purposes only.
-
-    $ git clone https://github.com/blopa/my-react-base-project.git
-    $ cd PROJECT
-    $ npm install
-
-## Start dev server
-
-    $ npm start
-
-## Simple build for production
-
-    $ npm run build
-
-## Update sources
-
-Some packages usages might change so you should run `npm prune` & `npm install` often.
-A common way to update is by doing
-
-    $ git pull
-    $ npm prune
-    $ npm install
-
-To run those 3 commands you can just do
-
-    $ npm run pull
-
-## Languages & tools
-
-### JavaScript
-
-- [eslint](https://github.com/eslint/eslint) is used to prevent JavaScript error and to check coding conventions.
-- [webpack](https://github.com/webpack/webpack) takes modules with dependencies and generates static assets representing those modules.
-- [babel](https://github.com/babel/babel) is used to 'compile' our Javascript code.
-
-### CSS
-
-- [Bootstrap](https://github.com/twbs/bootstrap) for some templating.
-
-### REST API
-
-- [typicode/json-server](https://github.com/typicode/json-server) for mocked data.
-
-# Release Notes
-- **v0.0.1:**
-	- First version
-
-# F.A.Q.
-**Q: Can you implement <???> function?**
-
-A: I can try. Open a issue and I'll see what I can do.
-
-**Q: Your project is awesome. How can I help?**
-
-A: Thank you! You can help by codding more features, creating pull requests, or donating using Bitcoin: **1BdL9w4SscX21b2qeiP1ApAFNAYhPj5GgG**
-
-# TODO
-- Create TODO list
-
-# License
-MIT License
-
-Copyright (c) 2018 blopa
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-**Free Software, Hell Yeah!**
+See [releases section](https://github.com/rtivital/react-pages-boilerplate/releases/) to get information about new cool features added to the project.
